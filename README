@@ -1,0 +1,68 @@
+LPQP FOR MAP INFERENCE
+----------------------
+
+This is the code implementing the LPQP algorithms introduced in:
+
+Patrick Pletscher & Sharon Wulff
+LPQP for MAP: Putting LP Solvers to Better Use
+ICML, 2012.
+
+The code was slightly modified after ICML and hence the results might differ a
+bit. We re-tested the grid experiments with this version of the code, and
+the results pretty much match the ones in the ICML paper. We did not
+re-run the protein & DTF experiments, but would expect roughly the same
+results as in the published paper.
+
+The tree-based LPQP weighting is implemented in LPQPSDD, the uniform weighting
+in LPQPNPBP.
+
+
+COMPILATION & INSTALL
+---------------------
+
+The software was successfully compiled and tested on Ubuntu 12.04, CentOS 6
+and Mac OS X 10.8.
+
+Compilation requires cmake, please make sure you have cmake installed on your
+system.
+
+1. create a directory build/
+2. run ./fetch_external.sh
+3. cd to build
+4. run cmake
+5. run make install
+6. run make test to check whether everything runs as expected
+
+the library and the matlab wrappers are now installed into bin/
+
+To use the wrapper in your own scripts, add the directory containing the
+mex_lpqp.mex* to the path within Matlab (using addpath).
+
+Remark: Make sure that the compiler optimizations are turned on (-O3),
+otherwise the code is *very* slow (probably has to do with the extensive use
+of Eigen).
+
+
+CITATION
+--------
+
+If you find the software useful, then please cite the following publication
+in your own work:
+
+@inproceedings{Pletscher2012,
+  author    = {Pletscher, Patrick and Wulff, Sharon},
+  title     = {LPQP for MAP: Putting LP Solvers to Better Use},
+  booktitle = {ICML},
+  year      = {2012},
+}
+
+
+COPYRIGHT
+---------
+
+The LPQP, dual decomposition and tree inference code is written & copyrighted
+by Patrick Pletscher and Sharon Wulff.
+
+The TRWS code is written by Vladimir Kolmogorov, and is here just
+re-distributed to easily compare to the results obtained using it. See its
+folder for the license.

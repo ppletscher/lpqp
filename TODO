@@ -1,0 +1,4 @@
+- review constants for solvers -> could probably make it quite a bit faster
+- review TODOs in the sources
+- idea for determining the initial rho: based on not needing more than 2/3*max_num_iter
+  to solve the initial convex inner problem for LPQP

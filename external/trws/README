@@ -1,0 +1,10 @@
+This is the code is written by Vladimir Kolmogorov and (c) Microsoft
+Corporation. Please refer to:
+
+http://research.microsoft.com/en-us/downloads/dad6c31e-2c04-471f-b724-ded18bf70fe3/
+
+and the included LICENSE.TXT for notes on how to appropriately cite the work
+in your papers or regarding copyrights.
+
+I only changed a few things to make it compile on recent versions of Mac OS X
+and Ubuntu Linux.
